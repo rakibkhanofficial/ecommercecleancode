@@ -7652,12 +7652,12 @@ async function seedUserRole () {
         if (user.userType === authConstant.USER_TYPES.Admin){
           userRolesArr.push({
             userId: user.id,
-            roleId: defaultRoles.find((d)=>d.code === 'ADMIN')._id
+            roleId: defaultRoles.find((d)=>d.code === 'ADMIN')?._id
           });
         } else if (user.userType === authConstant.USER_TYPES.User){
           userRolesArr.push({
             userId: user.id,
-            roleId: defaultRoles.find((d)=>d.code === 'USER')._id
+            roleId: defaultRoles.find((d)=>d.code === 'USER')?._id
           });
         } else {
           userRolesArr.push({
